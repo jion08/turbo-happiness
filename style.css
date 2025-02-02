@@ -1,0 +1,59 @@
+/* 전체 페이지 스타일 */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 시간 표시 */
+#time {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+}
+
+/* 날짜 표시 */
+#date {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+}
+
+/* 날씨 정보 */
+#weather {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: white;
+}
+
+/* 뉴스 정보 */
+#rss {
+    font-size: 25px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5); /* 투명한 배경 */
+    border-radius: 10px;
+    text-align: left;
+}
+
+#news p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* 캘린더 (추가할 경우 스타일) */
+#calendar {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
