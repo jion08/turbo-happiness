@@ -12,7 +12,7 @@ updateTime(); // 초기 실행
 
 // 2. 날씨 정보 가져오기
 async function fetchWeather() {
-    const apiKey = "${{ secrets.API_KEY }}"; // AccuWeather API 키
+    const apiKey = "NV7Hradt6EI3WxugDhR7cddClrBRxF3r"; // AccuWeather API 키
     const locationKey = "3558147"; // 예: 서울의 Location Key
     const url = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${apiKey}&language=ko-kr`;
 
