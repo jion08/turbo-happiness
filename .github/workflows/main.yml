@@ -1,4 +1,4 @@
-name: My Workflow # 워크플로우 이름
+name: WEATHER_API # 워크플로우 이름
 on: # 워크플로우 실행 조건
   push:
     branches: [main] # main 브랜치에 push가 발생하면 실행
