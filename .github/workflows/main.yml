@@ -1,0 +1,14 @@
+name: My Workflow # 워크플로우 이름
+on: # 워크플로우 실행 조건
+  push:
+    branches: [main] # main 브랜치에 push가 발생하면 실행
+jobs:
+  build:
+    runs-on: ubuntu-latest # 실행 환경
+    steps:
+      - name: Checkout code # 코드 체크아웃
+        uses: actions/checkout@v3
+      - name: Use API key # API 키 사용
+        run: |
+          echo "${{ secrets.API_KEY }}" # API 키 출력 (테스트)
+          # 실제 API 키를 사용하는 코드 작성
