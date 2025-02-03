@@ -39,7 +39,7 @@ body {
     padding: 15px;
     width: 90%; /* 가로 사이즈 확장 */
     max-width: 1000px; /* 최대 너비 확장 */
-    background: rgba(0, 0, 0, 0.7); /* 검정색 반투명 배경 (더 진하게) */
+    background: rgba(0, 0, 0, 0.5); /* 검정색 반투명 배경 (더 진하게) */
     border-radius: 10px;
     text-align: left;
 }
