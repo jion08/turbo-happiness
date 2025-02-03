@@ -82,7 +82,7 @@ async function fetchRSS() {
 // HTML이 로드된 후 실행
 document.addEventListener("DOMContentLoaded", () => {
     fetchRSS(); // 초기 실행
-    setInterval(fetchRSS, 60000); // 1분(60,000ms)마다 실행
+    setInterval(fetchRSS, 600000); // 1분(60,000ms)마다 실행
 });
  // 뉴스 데이터 가져오기
 
