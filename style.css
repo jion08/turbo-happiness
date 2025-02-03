@@ -4,9 +4,15 @@ body {
     font-family: 'Arial', sans-serif;
     color: white;
     text-align: center;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100vh; /* 화면 높이 전체 사용 */
+    width: 100vw; /* 화면 너비 전체 사용 */
+    /*overflow: hidden; 스크롤 제거 (필요하면 주석 처리) */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가로 중앙 정렬 */
 }
 
 /* 시간 표시 */
@@ -39,7 +45,7 @@ body {
     padding: 15px;
     width: 90%; /* 가로 사이즈 확장 */
     max-width: 1000px; /* 최대 너비 확장 */
-    background: rgba(0, 0, 0, 0.5); /* 검정색 반투명 배경 (더 진하게) */
+    background: rgba(0, 0, 0, 0.7); /* 검정색 반투명 배경 */
     border-radius: 10px;
     text-align: left;
 }
