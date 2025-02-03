@@ -7,7 +7,6 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.5);
 }
 
 /* 시간 표시 */
@@ -37,18 +36,20 @@ body {
 #rss {
     font-size: 25px;
     margin: 20px auto;
-    padding: 10px;
-    width: 90%;
-    max-width: 600px;
-    background: rgba(0, 0, 0, 0.5); /* 투명한 배경 */
+    padding: 15px;
+    width: 90%; /* 가로 사이즈 확장 */
+    max-width: 1000px; /* 최대 너비 확장 */
+    background: rgba(0, 0, 0, 0.7); /* 검정색 반투명 배경 (더 진하게) */
     border-radius: 10px;
     text-align: left;
 }
 
+/* 뉴스 항목 스타일 */
 #news p {
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
+    color: black; /* 글씨 검정색 */
 }
 
 /* 캘린더 (추가할 경우 스타일) */
@@ -57,3 +58,15 @@ body {
     margin: 20px 0;
 }
 
+/* 반응형 디자인 */
+@media screen and (max-width: 768px) {
+    #time {
+        font-size: 2rem;
+    }
+    #weather, #calendar {
+        font-size: 1.2rem;
+    }
+    #news p {
+        font-size: 1rem;
+    }
+}
