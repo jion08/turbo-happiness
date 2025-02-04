@@ -38,7 +38,7 @@ fetchWeather(); // 날씨 데이터 가져오기
 
 // 3. JTBC 뉴스 RSS 가져오기
 async function fetchRSS() {
-    const rssUrl = "https://news-ex.jtbc.co.kr/v1/get/rss/issue"; // JTBC RSS URL
+    const rssUrl = "https://rss.donga.com/politics.xml"; // JTBC RSS URL
     const proxy = "https://cors-anywhere.herokuapp.com/"; // CORS 우회 프록시
     const url = `${proxy}${rssUrl}`;
 
