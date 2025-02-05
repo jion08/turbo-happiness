@@ -76,3 +76,20 @@ body {
         font-size: 1rem;
     }
 }
+
+/* 반투명 레이어 */
+#overlay {
+    position: fixed; /* 화면 전체 덮기 */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3); /* 검정색 반투명 (0.5 = 50%) */
+    z-index: 1; /* 텍스트보다 아래에 배치 */
+}
+
+/* 기존 텍스트 요소들이 레이어 위에 표시되도록 */
+#date, #time, #weather, #rss, #calendar {
+    position: relative;
+    z-index: 2;
+}
