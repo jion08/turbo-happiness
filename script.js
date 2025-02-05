@@ -88,11 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 4. 배경 이미지 변경
 function updateBackground() {
-    const backgrounds = [
-        "https://picsum.photos/1920/1080?random",
-    ];
-    const randomIndex = Math.floor(Math.random() * backgrounds.length);
-    document.body.style.backgroundImage = `url(${backgrounds[randomIndex]})`;
+    const timestamp = new Date().getTime(); // 현재 시간 (캐시 방지)
+    const imageUrl = `https://picsum.photos/1920/1080?random&t=${timestamp}`;
+    document.body.style.backgroundImage = `url(${imageUrl})`;
 }
+
 setInterval(updateBackground, 600000); // 10분마다 변경
 updateBackground(); // 초기 실행
