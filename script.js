@@ -88,11 +88,26 @@ document.addEventListener("DOMContentLoaded", () => {
  // 뉴스 데이터 가져오기
 
 // 4. 배경 이미지 변경
+let currentBackground = 1; // 현재 표시 중인 배경
+
 function updateBackground() {
-    const timestamp = new Date().getTime(); // 현재 시간 (캐시 방지)
-    const imageUrl = `https://picsum.photos/1920/1080?random&t=${timestamp}`;
-    document.body.style.backgroundImage = `url(${imageUrl})`;
+    const newImageUrl = `https://picsum.photos/1920/1080?random=${Date.now()}`; // 새 이미지 URL
+
+    const nextBackground = currentBackground === 1 ? 2 : 1; // 다음 배경 선택
+    const currentBgElement = document.getElementById(`background${currentBackground}`);
+    const nextBgElement = document.getElementById(`background${nextBackground}`);
+
+    // 새 이미지 설정
+    nextBgElement.style.backgroundImage = `url(${newImageUrl})`;
+
+    // 1초 후에 투명도 조절하여 배경 전환
+    setTimeout(() => {
+        nextBgElement.style.opacity = "1";
+        currentBgElement.style.opacity = "0";
+        currentBackground = nextBackground; // 현재 배경 업데이트
+    }, 500);
 }
 
-setInterval(updateBackground, 600000); // 10분마다 변경
+// 10분(600000ms)마다 업데이트
+setInterval(updateBackground, 6000);
 updateBackground(); // 초기 실행
