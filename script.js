@@ -33,8 +33,9 @@ document.getElementById("weather").innerText = `다산동 ${temperature}°C, ${w
     }
 }
 
-// 함수 실행
-fetchWeather(); // 날씨 데이터 가져오기
+// 1시간(3600000ms)마다 업데이트
+setInterval(fetchWeather, 3600000);
+fetchWeather(); // 초기 실행
 
 // 3. JTBC 뉴스 RSS 가져오기
 async function fetchRSS() {
