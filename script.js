@@ -109,5 +109,5 @@ function updateBackground() {
 }
 
 // 10분(600000ms)마다 업데이트
-setInterval(updateBackground, 6000);
+setInterval(updateBackground, 600000);
 updateBackground(); // 초기 실행
